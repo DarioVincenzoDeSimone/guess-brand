@@ -105,6 +105,7 @@ const LIVES = [0, 1, 2] as const;
 
         <div class="lg-area">
           <div class="lg-grid" role="group"
+               [class.lg-grid--5]="game.logoOptions().length <= 5"
                [attr.aria-label]="s.language() === 'it' ? 'Scegli il logo' : 'Choose the logo'">
             @for (brand of game.logoOptions(); track brand.id) {
               @let isWrong   = game.wrongClicks().has(brand.id);
@@ -241,22 +242,33 @@ const LIVES = [0, 1, 2] as const;
 
     /* ── Mode 2: logo grid ── */
     .lg-area {
-      flex: 1; min-height: 0; width: 100%; max-width: 32rem;
-      display: flex; flex-direction: column; overflow-y: auto; padding-bottom: 0.25rem;
+      flex: 1; min-height: 0;
+      width: 100%; max-width: 32rem;
+      overflow-y: auto;
     }
+    /* 10 loghi (5 righe) riempiono l'altezza disponibile senza scroll;
+       min-height fa scattare lo scroll solo quando lo schermo è troppo piccolo */
     .lg-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
-      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(135px, 1fr));
+      grid-template-rows: repeat(5, 1fr);
+      height: 100%; min-height: 550px;
+      gap: 0.5rem;
     }
-    /* Square buttons: car logos look best in a square container */
+    /* Dopo il suggerimento: 5 loghi → 3 righe */
+    .lg-grid--5 {
+      grid-template-rows: repeat(3, 1fr);
+      min-height: 330px;
+    }
     .lg-btn {
-      position: relative; aspect-ratio: 1/1;
+      position: relative;
       border-radius: 0.875rem; border: 2.5px solid #bae6fd;
       background: white;
       display: flex; align-items: center; justify-content: center;
-      padding: 0.75rem; cursor: pointer; overflow: hidden;
+      padding: 0.5rem; cursor: pointer; overflow: hidden;
       transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
       touch-action: manipulation; box-sizing: border-box;
+      min-height: 0; min-width: 0;
     }
     .lg-btn:hover:not(:disabled) { border-color: #7dd3fc; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
     .lg-btn:active:not(:disabled) { transform: scale(0.97); }
