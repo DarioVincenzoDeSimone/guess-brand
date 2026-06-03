@@ -1,24 +1,20 @@
 {
   "name": "guess-brand",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4202",
+    "dev": "ng serve --port 4202",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "deploy": "ng build --base-href \"https://DarioVincenzoDeSimone.github.io/guess-brand/\" && npx angular-cli-ghpages --dir=dist/guess-brand/browser",
+    "download-logos": "node scripts/download-logos.mjs"
   },
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
+    "overrides": [{ "files": "*.html", "options": { "parser": "angular" } }]
   },
   "private": true,
   "packageManager": "npm@11.13.0",
@@ -37,6 +33,7 @@
     "@angular/cli": "^21.1.2",
     "@angular/compiler-cli": "^21.1.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "angular-cli-ghpages": "^3.0.3",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.12",

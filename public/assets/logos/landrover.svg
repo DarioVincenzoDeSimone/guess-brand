@@ -1,0 +1,10 @@
+<svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Oval badge -->
+  <ellipse cx="150" cy="60" rx="145" ry="55" fill="#006633"/>
+  <ellipse cx="150" cy="60" rx="135" ry="45" fill="none" stroke="#c8a850" stroke-width="3"/>
+  <!-- Text: LAND ROVER -->
+  <text x="150" y="50" text-anchor="middle" dominant-baseline="middle"
+        font-family="serif" font-weight="900" font-size="26" fill="white" letter-spacing="3">LAND</text>
+  <text x="150" y="78" text-anchor="middle" dominant-baseline="middle"
+        font-family="serif" font-weight="900" font-size="26" fill="white" letter-spacing="2">ROVER</text>
+</svg>
