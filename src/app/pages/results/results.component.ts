@@ -8,9 +8,6 @@ import { SettingsService } from '../../services/settings.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="shell">
-      <div class="decor decor--tl" aria-hidden="true"></div>
-      <div class="decor decor--br" aria-hidden="true"></div>
-
       <h1 class="results-title">
         {{ game.totalScore() >= 70 ? '🏆' : game.totalScore() >= 40 ? '👍' : '🏎️' }}
         {{ s.t('results') }}
@@ -76,11 +73,8 @@ import { SettingsService } from '../../services/settings.service';
       height: 100%; padding: 1.5rem;
       background: #e0f2fe; border: 8px solid #bae6fd; border-radius: 1.5rem;
       box-shadow: inset 0 2px 16px rgba(0,0,0,0.08);
-      box-sizing: border-box; position: relative; overflow-y: auto; gap: 0.75rem;
+      box-sizing: border-box; position: relative; overflow: hidden; gap: 0.75rem;
     }
-    .decor { position: absolute; width: 10rem; height: 10rem; border-radius: 9999px; z-index: 0; pointer-events: none; }
-    .decor--tl { top: -3rem; left: -3rem; background: #fce7f3; }
-    .decor--br { bottom: -3rem; right: -3rem; background: #d1fae5; }
     .results-title {
       font-size: clamp(1.8rem, 6vw, 2.5rem); font-weight: 900; color: #0c4a6e;
       text-transform: uppercase; letter-spacing: 0.05em; text-align: center;
