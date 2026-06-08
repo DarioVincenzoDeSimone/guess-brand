@@ -61,6 +61,28 @@ const SLUGS = {
   jaguar:       'jaguar',
   astonmartin:  'astonmartin',
   buick:        'buick',
+  // ── New brands ──────────────────────────────────────────────────
+  dacia:          'dacia',
+  lancia:         'lancia',
+  mg:             'mg',
+  byd:            'byd',
+  haval:          'haval',
+  rivian:         'rivian',
+  pagani:         'pagani',
+  mclaren:        'mclaren',
+  koenigsegg:     'koenigsegg',
+  lynkco:         'lynkco',
+  sssangyong:     'ssangyong',
+  ducati:         'ducati',
+  harleydavidson: 'harleydavidson',
+  vespa:          'vespa',
+  piaggio:        'piaggio',
+  yamaha:         'yamaha',
+  kawasaki:       'kawasaki',
+  triumph:        'triumph',
+  aprilia:        'aprilia',
+  ktm:            'ktm',
+  royalenfield:   'royalenfield',
 };
 
 // Brand display names for placeholder SVG fallback
@@ -76,6 +98,12 @@ const NAMES = {
   bugatti:'Bugatti', seat:'SEAT', skoda:'Škoda', opel:'Opel',
   acura:'Acura', lexus:'Lexus', infiniti:'Infiniti', genesis:'Genesis',
   suzuki:'Suzuki', jaguar:'Jaguar', astonmartin:'AM', buick:'Buick',
+  dacia:'Dacia', lancia:'Lancia', mg:'MG', byd:'BYD', haval:'Haval',
+  rivian:'Rivian', pagani:'Pagani', mclaren:'McLaren', koenigsegg:'Kgsegg',
+  lynkco:'Lynk&Co', sssangyong:'SsangYng', ducati:'Ducati',
+  harleydavidson:'Harley', vespa:'Vespa', piaggio:'Piaggio',
+  yamaha:'Yamaha', kawasaki:'Kawasaki', triumph:'Triumph', aprilia:'Aprilia',
+  ktm:'KTM', royalenfield:'Royal E',
 };
 
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });

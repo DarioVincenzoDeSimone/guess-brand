@@ -4,6 +4,8 @@
 
 Live: **[DarioVincenzoDeSimone.github.io/guess-brand](https://DarioVincenzoDeSimone.github.io/guess-brand/)**
 
+<img width="415" height="898" alt="Image" src="https://github.com/user-attachments/assets/3fd6cc93-8d5b-45b8-a470-ba6fd0eaefed" />
+
 ---
 
 ## The Philosophy — Playing Side by Side
@@ -30,7 +32,7 @@ This game is the third in a collection, built game by game as children grow:
 |---|---|---|
 | [**L'Impiccato**](https://github.com/DarioVincenzoDeSimone/impiccato) | Classic Hangman — Italian vocabulary, multiplayer mode | [▶ Play](https://DarioVincenzoDeSimone.github.io/impiccato/) |
 | [**Guess Flag!**](https://github.com/DarioVincenzoDeSimone/guess-flag) | World-flags geography quiz — 195 countries, two modes | [▶ Play](https://DarioVincenzoDeSimone.github.io/guess-flag/) |
-| **Guess Brand!** | Car-brand logo quiz — 44 brands, two modes *(this project)* | [▶ Play](https://DarioVincenzoDeSimone.github.io/guess-brand/) |
+| **Guess Brand!** | Car-brand & moto logo quiz — 65 brands, two modes *(this project)* | [▶ Play](https://DarioVincenzoDeSimone.github.io/guess-brand/) |
 | *More coming…* | Each game designed by a parent who cares | |
 
 Every game in the suite shares the same visual identity — sky-blue shell, pink titles, orange play button — so switching between them feels seamless.
@@ -49,7 +51,7 @@ A brand name appears at the top. Ten logos are shown in a grid — tap the right
 Same 3-life rule applies. The 💡 hint removes 5 wrong logos.
 
 Settings let you choose:
-- **Difficulty** — Easy (15 brands), Medium (30), Hard (all 44)
+- **Difficulty** — Easy (21 brands), Medium (47), Hard (all 65)
 - **Language** — Italiano / English
 - **Sound** — On / Off
 
@@ -59,11 +61,11 @@ Each session is 10 rounds. Maximum score: 100 points (10 per round, −2 per wro
 
 ## The Brand Collection
 
-**Easy (15)** — Toyota, BMW, Mercedes-Benz, Volkswagen, Ford, Audi, Ferrari, Lamborghini, Porsche, Honda, Tesla, Fiat, Renault, Hyundai, Volvo
+**Easy (21)** — Toyota, BMW, Mercedes-Benz, Volkswagen, Ford, Audi, Ferrari, Lamborghini, Porsche, Honda, Tesla, Fiat, Renault, Hyundai, Volvo, Dacia, Lancia + Ducati, Harley-Davidson, Vespa, Piaggio
 
-**Medium (30)** — all of the above plus Nissan, Mazda, Kia, Peugeot, Citroën, Mini, Alfa Romeo, Maserati, Jeep, Chevrolet, Land Rover, Bentley, Rolls-Royce, Subaru, Mitsubishi
+**Medium (47)** — all of the above plus Nissan, Mazda, Kia, Peugeot, Citroën, Mini, Alfa Romeo, Maserati, Jeep, Chevrolet, Land Rover, Subaru, Mitsubishi, SEAT, Škoda, Opel, Suzuki, Jaguar, MG, BYD, Haval, Rivian + Yamaha, Kawasaki, Triumph, Aprilia
 
-**Hard (44)** — all of the above plus Dodge, Cadillac, Bugatti, SEAT, Škoda, Opel, Acura, Lexus, Infiniti, Genesis, Suzuki, Jaguar, Aston Martin, Buick
+**Hard (65)** — all of the above plus Dodge, Cadillac, Bugatti, Acura, Lexus, Infiniti, Genesis, Aston Martin, Buick, Bentley, Rolls-Royce, Pagani, McLaren, Koenigsegg, Lynk & Co, SsangYong + KTM, Royal Enfield
 
 ---
 
@@ -112,7 +114,7 @@ See [`docs/DEPLOY.md`](docs/DEPLOY.md) for the full step-by-step guide.
 
 ```
 src/app/
-  data/brands.ts            # 44 brands with IT/EN names + difficulty tier
+  data/brands.ts            # 65 brands with IT/EN names + difficulty tier
   services/
     settings.service.ts     # Persisted settings (localStorage)
     game.service.ts         # Core game state (Angular signals)
@@ -125,6 +127,6 @@ src/app/
     results/                # End-of-session scoreboard
 scripts/
   download-logos.mjs        # Downloads SVGs from cdn.simpleicons.org
-public/assets/logos/        # 44 brand SVG files
+public/assets/logos/        # 65 brand SVG files
 docs/                       # Architecture, game design, deploy & scope docs
 ```
